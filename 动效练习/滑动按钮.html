@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滑动按钮</title>
+		<style>
+			a{text-decoration: none;display: inline-block;margin:10px 30px;color: #fff;line-height: 40px;float: right;}
+			.main{width: 700px;height: 100px;background: #2c3e50;margin: 0 auto;}
+			.group{height: 40px;padding: 10px 40px;line-height: 40px;position: relative;z-index: 1;margin: 100px auto 0px;}
+			.one{transition: 1.0s;}
+			.two,.three{color: #a6afbf;}
+			.bg{background: #e67e22;height: 60px;width: 170px;position: absolute;top: 10px;margin-left:-200px;z-index: 1;transition: 1s;border-radius: 5px;}
+			.bg2{height: 60px;width: 170px;position: absolute;top: 10px;margin-left:-200px;z-index: 1;transition: 1s;border-radius: 5px;}
+			.two>span:hover+.bg{width: 200px;margin-left: -40px;background: #27ae60;top: 10px;}
+			.two>span:hover{color:#fff;}
+			.two:hover +.one,.three:hover~a{color: #a6afbf;}
+			.three:hover+.two>.bg{width: 240px;margin-left: 160px;background: #007AFF;top: 10px;}
+			/*.three:hover+.bg{}*/
+			.three>span:hover{color: #fff;}
+			span{padding: 10px 0;transition:1s ;position: relative;z-index: 10;}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="group">
+				<a href="#" class="three"><span>I　AM COOL TOO TOO</span>
+					<!--<div class="bg2"></div>-->
+				</a>
+				<a href="#" class="two">
+					<span>I AM COOL TOO</span>
+					<div class="bg"></div>
+				</a>
+				
+				<a href="#" class="one"><span>I　AM COOL</span> </a>
+			</div>
+		</div>
+	</body>
+</html>

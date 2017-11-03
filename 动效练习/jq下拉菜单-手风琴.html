@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>手风琴</title>
+		<style>
+			.list{width: 200px;border:1px solid #000;border-bottom: 0px;}
+			dt{font-size: 20px;padding: 10px;}
+			dl{border-bottom: 1px solid #000;}
+			dd a{padding: 10px;text-decoration: none;}
+		</style>
+	</head>
+	<body>
+		<div class="list">
+			<div>
+				<dl>
+					<dt>水果</dt>
+					<dd   ><a href="#">苹果</a></dd>
+		            <dd   ><a href="#">香蕉</a></dd>
+		            <dd   ><a href="#">橘子</a></dd>
+		            <dd   ><a href="#">西瓜</a></dd>
+		            <dd   ><a href="#">葡萄</a></dd>
+				</dl>
+				<dl>
+					<dt>蔬菜</dt>
+					<dd   ><a href="#">苹果</a></dd>
+		            <dd   ><a href="#">香蕉</a></dd>
+		            <dd   ><a href="#">橘子</a></dd>
+		            <dd   > <a href="#">西瓜</a></dd>
+		            <dd   ><a href="#">葡萄</a></dd>
+				</dl>
+				<dl>
+					<dt>其他</dt>
+					<dd   > <a href="#">苹果</a></dd>
+		            <dd   ><a href="#">香蕉</a></dd>
+		            <dd   ><a href="#">橘子</a></dd>
+		            <dd   ><a href="#">西瓜</a></dd>
+		            <dd   ><a href="#">葡萄</a></dd>
+				</dl>
+			</div>
+		</div>
+		<div class="test" style="width: 100px;height: 100px;border: 1px solid #000;">test</div>
+		<script src="jquery-1.11.3.min.js"></script>
+		<script>
+			$(function(){
+				$('dd').hide();
+				$('.list dt').mouseenter(function(){
+					$(this).parent().find('dd').removeClass('menu_chiose');
+
+					$(this).parent().siblings().find('dd').slideUp();
+
+					$(this).parent().find('dd').slideToggle();
+
+				})
+				$('.test').mouseenter(function(){
+					$(this).slideToggle()
+				})
+			})
+		</script>
+	</body>
+</html>
